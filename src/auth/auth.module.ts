@@ -11,14 +11,16 @@ import { UsersModule } from '../users/users.module';
   imports: [
     UsersModule,
     PassportModule,
-    JwtModule.registerAsync({
+   /* JwtModule.registerAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         secret: config.get<string>('JWT_SECRET')!,
         signOptions: { expiresIn: 3600 },
       }),
-    }),
+    }),*/
+
+    JwtModule.register({}),
   ],
   providers: [AuthService, JwtStrategy],
   controllers: [AuthController],
