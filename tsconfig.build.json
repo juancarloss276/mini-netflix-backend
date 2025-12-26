@@ -4,9 +4,10 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
-    "module": "commonjs",
+    "module": "NodeNext",           // ⚠️ Cambiar a NodeNext
     "target": "es2020",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext"  // debe coincidir con module
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
