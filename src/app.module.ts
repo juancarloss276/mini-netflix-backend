@@ -21,13 +21,16 @@ import { RolesGuard } from './auth/roles.guard';
       database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     UsersModule,
     AuthModule,
     SeriesModule,
     EpisodiosModule,
   ],
-   providers: [
+  providers: [
     {
       provide: APP_GUARD,
       useClass: JwtAuthGuard,
