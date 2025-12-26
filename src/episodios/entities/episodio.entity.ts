@@ -4,17 +4,17 @@ import { Serie } from '../../series/entities/series.entity';
 @Entity()
 export class Episodio {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  titulo: string;
+  titulo!: string;
 
   @Column()
-  duracion: number;
+  duracion!: number;
 
   @Column()
-  numeroCapitulo: number;
+  numeroCapitulo!: number;
 
   @ManyToOne(() => Serie, serie => serie.episodios, { onDelete: 'CASCADE' })
-  serie: Serie;
+  serie!: Serie;
 }

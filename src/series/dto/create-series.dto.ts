@@ -3,14 +3,14 @@ import { IsString, IsNotEmpty } from 'class-validator';
 export class CreateSeriesDto {
   @IsString()
   @IsNotEmpty()
-  titulo: string;
+  titulo!: string;
 
   @IsString()
-  genero: string;
+  genero!: string;
 
   @IsString()
-  sinopsis: string;
+  sinopsis!: string;
 
   @IsString()
-  urlPortada: string;
+  urlPortada!: string;
 }

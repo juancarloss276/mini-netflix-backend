@@ -4,20 +4,20 @@ import { Episodio } from '../../episodios/entities/episodio.entity';
 @Entity()
 export class Serie {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  titulo: string;
+  titulo!: string;
 
   @Column()
-  genero: string;
+  genero!: string;
 
   @Column()
-  sinopsis: string;
+  sinopsis!: string;
 
   @Column()
-  urlPortada: string;
+  urlPortada!: string;
 
   @OneToMany(() => Episodio, (episodio) => episodio.serie)
-  episodios: Episodio[];
+  episodios!: Episodio[];
 }

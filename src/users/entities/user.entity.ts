@@ -5,14 +5,14 @@ export type UserRole = 'admin' | 'user';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column({ unique: true })
-  username: string;
+  username!: string;
 
   @Column()
-  password: string;
+  password!: string;
 
   @Column({ default: 'user' })
-  role: UserRole;
+  role!: UserRole;
 }

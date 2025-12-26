@@ -2,14 +2,14 @@ import { IsNumber, IsString } from 'class-validator';
 
 export class CreateEpisodioDto {
   @IsString()
-  titulo: string;
+  titulo!: string;
 
   @IsNumber()
-  duracion: number;
+  duracion!: number;
 
   @IsNumber()
-  numeroCapitulo: number;
+  numeroCapitulo!: number;
 
   @IsNumber()
-  serieId: number;
+  serieId!: number;
 }
